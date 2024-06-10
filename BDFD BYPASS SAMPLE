@@ -1,0 +1,18 @@
+$nomention
+$botTyping
+$reply
+$footer[Powered by CosmicX Development]
+$thumbnail[$authorAvatar]
+$author[Evolution X] $c[Bot name]
+$image[$getServerVar[gif]] $c[Bypassed text image]
+$authorIcon[$getServerVar[logo]] $c[Bot logo]
+$authorURL[$getBotInvite]
+$color[$getServerVar[color]] $c[Bot embed color]
+$httpGet[https://stickx.top/api-fluxus/?hwid=$replaceText[$message;https://flux.li/android/external/start.php?HWID=;]&api_key=E99l9NOctud3vmu6bPne]
+$if[$checkContains[$httpResult[status];success]==true]
+# $getServerInvite[GUILD ID]
+$description[]
+$addField[__**Status:**__;```$httpResult[key]```]
+$addField[__**Time Taken:**__; ```0.$executionTime seconds```]
+$else
+$description[ ``Error`` | Could not bypass the link. Please make sure the link is valid and you are pasting the full link instead of only HWID.]
